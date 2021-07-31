@@ -22,7 +22,7 @@ public class AndroidFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         androidViewModel =
                 new ViewModelProvider(this).get(AndroidViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_web, container, false);
+        View root = inflater.inflate(R.layout.fragment_android, container, false);
         final TextView textView = root.findViewById(R.id.text_android);
         androidViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
