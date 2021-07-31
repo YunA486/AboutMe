@@ -1,4 +1,4 @@
-package kr.hs.emirim.aboutme.ui.notifications;
+package kr.hs.emirim.aboutme.ui.console;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,18 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import kr.hs.emirim.aboutme.R;
+import kr.hs.emirim.aboutme.ui.home.HomeViewModel;
 
-public class NotificationsFragment extends Fragment {
+public class ConsoleFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private ConsoleViewModel consoleViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_android, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        consoleViewModel =
+                new ViewModelProvider(this).get(ConsoleViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_console, container, false);
+        final TextView textView = root.findViewById(R.id.text_console);
+        consoleViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

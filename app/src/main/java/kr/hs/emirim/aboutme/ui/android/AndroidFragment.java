@@ -1,4 +1,4 @@
-package kr.hs.emirim.aboutme.ui.dashboard;
+package kr.hs.emirim.aboutme.ui.android;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import kr.hs.emirim.aboutme.R;
 
-public class DashboardFragment extends Fragment {
+public class AndroidFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private AndroidViewModel androidViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        androidViewModel =
+                new ViewModelProvider(this).get(AndroidViewModel.class);
         View root = inflater.inflate(R.layout.fragment_web, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = root.findViewById(R.id.text_android);
+        androidViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
