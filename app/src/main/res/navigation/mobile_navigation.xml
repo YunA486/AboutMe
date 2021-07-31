@@ -6,20 +6,32 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
+        android:id="@+id/navigation_web"
+        android:name="kr.hs.emirim.aboutme.ui.web.WebFragment"
+        android:label="@string/title_web"
+        tools:layout="@layout/fragment_web" />
+
+    <fragment
+        android:id="@+id/navigation_android"
+        android:name="kr.hs.emirim.aboutme.ui.android.AndroidFragment"
+        android:label="@string/title_android"
+        tools:layout="@layout/fragment_android" />
+
+    <fragment
         android:id="@+id/navigation_home"
         android:name="kr.hs.emirim.aboutme.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="kr.hs.emirim.aboutme.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_game"
+        android:name="kr.hs.emirim.aboutme.ui.game.GameFragment"
+        android:label="@string/title_game"
+        tools:layout="@layout/fragment_game" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="kr.hs.emirim.aboutme.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_console"
+        android:name="kr.hs.emirim.aboutme.ui.console.ConsoleFragment"
+        android:label="@string/title_console"
+        tools:layout="@layout/fragment_console" />
 </navigation>
